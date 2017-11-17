@@ -55,4 +55,5 @@ function plugin_code_init()
             htmlspecialchars(PLUGIN_CODE_SCRIPT_URL, ENT_COMPAT, SOURCE_ENCODING));
         $head_tags[] = '<script>hljs.initHighlightingOnLoad();</script>';
     }
+    return true; // if miss return (or return null) with old pukiwiki, init may be called multiple times...
 }
